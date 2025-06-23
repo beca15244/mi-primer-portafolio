@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Mente y Conciencia: Explorando los rincones de la psique humana
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom styles for font and background color */
+      body {
+        font-family: "Montserrat", sans-serif; /* Main Montserrat font */
+        background-color: #b9cfe6; /* Updated background color for body */
+        color: black; /* Black text color for body */
+        padding: 20px; /* 20 pixels of internal padding for body */
+      }
+      /* Rule for the main container, limiting width and centering it */
+      .container {
+        max-width: 1000px; /* Maximum width for content */
+        margin: 0 auto; /* Center content horizontally */
+      }
+      header,
+      nav,
+      main,
+      footer {
+        padding: 1rem;
+      }
+      header {
+        background-color: #4578b1; /* Updated background color for header */
+        color: black; /* Black text color for header */
+        text-align: center;
+        padding: 2rem 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem; /* Larger font size for the title */
+        margin-bottom: 0.5rem;
+      }
+      nav {
+        background-color: #6395ca; /* Darker blue for navigation */
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      nav ul {
+        display: flex; /* Display elements inline */
+        justify-content: center;
+        list-style: none;
+        padding: 0.75rem 0;
+      }
+      nav ul li a {
+        color: black; /* Black text color for menu links */
+        text-decoration: none; /* Remove underline */
+        padding: 10px; /* 10 pixels of internal padding for links */
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for text and background color */
+      }
+      nav ul li a:hover {
+        background-color: #a7c7e7; /* Light blue background on hover */
+        color: black; /* Black text color on hover */
+      }
+      main {
+        background-color: #ffffff; /* White background for main content */
+        margin-top: 1.5rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      section {
+        padding: 40px 20px; /* Internal padding of 40px top/bottom and 20px left/right */
+        margin-bottom: 30px; /* 30 pixels of bottom external space */
+        border-bottom: 1px solid #e5e7eb; /* Soft dividing line */
+      }
+      section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      h2 {
+        color: black; /* Black text color for section titles */
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #818cf8; /* Visual detail on the title */
+        padding-left: 0.75rem;
+        text-align: center; /* Center the text of h2 headings */
+      }
+      /* Specific style for "Explorando la Mente" section */
+      #explorar {
+        background-color: #dce7f3; /* Very light gray background color for Explore section */
+        padding: 2rem; /* Add padding for better background visibility */
+        border-radius: 1rem; /* Keep rounded borders */
+      }
+      /* Specific style for "Curiosidades y Mitos" section */
+      #curiosidades {
+        background-color: #dce7f3; /* Very light gray background color for curiosities section */
+      }
+      /* Specific style for "Psicología en la Vida Cotidiana" section */
+      #psicologia {
+        background-color: #dce7f3; /* Very light gray background color for psychology section */
+      }
+      /* Specific style for "Bienestar y Autocuidado" section */
+      #bienestar {
+        background-color: #dce7f3; /* Very light gray background color for wellness section */
+      }
+      #bienestar img {
+        display: block; /* Ensure the image is a block element */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+      strong {
+        color: black; /* Highlight strong text with black color */
+      }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1.5rem 1rem;
+        color: black; /* Black text color for footer */
+        font-size: 0.9rem;
+        background-color: #e5e7eb; /* Slightly gray background for footer */
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      /* Responsive styles with Tailwind */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav ul li {
+          margin-bottom: 0.5rem;
+        }
+        nav ul li a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+      /* Styles for the new button - AMETHYST COLOR */
+      #datoCuriosoBtn,
+      #beHappyBtn {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #9966cc; /* Color amatista para el fondo del botón */
+        color: white; /* Texto blanco para que contraste bien */
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+      }
+
+      #datoCuriosoBtn:hover,
+      #beHappyBtn:hover {
+        background-color: #7a4f9f; /* Un amatista un poco más oscuro al pasar el ratón */
+      }
+
+      #datoCuriosoParrafo,
+      #motivacionFrase {
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      /* Estilos para la galería de imágenes */
+      .gallery-container {
+        display: none; /* Inicialmente oculto */
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item {
+        flex: 1;
+        min-width: 300px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .gallery-item {
+          width: 90%;
+          min-width: unset;
+        }
+      }
+
+      /* Estilo para el botón de la galería - AHORA AMATISTA */
+      #mostrarGaleriaBtn {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #9966cc; /* Color amatista para el fondo del botón */
+        color: white; /* Texto blanco para que contraste bien */
+        border: none;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s ease;
+      }
+
+      #mostrarGaleriaBtn:hover {
+        background-color: #7a4f9f; /* Un amatista un poco más oscuro al pasar el ratón */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Mente y Conciencia: Explorando los rincones de la psique humana</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#explorar">Explorando la Mente</a></li>
+          <li><a href="#bienestar">Bienestar y Autocuidado</a></li>
+          <li><a href="#psicologia">Psicología en la Vida Cotidiana</a></li>
+          <li><a href="#curiosidades">Curiosidades y Mitos</a></li>
+          <li>
+            <a href="#nuestra-app-juego">🌸 Mind Canvas: Traza tu Bienestar Mental 🧠</a>
+    </li>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">
+          ¡Bienvenido/a a "Mente y Conciencia"! Tu espacio para explorar los
+          fascinantes recovecos de la psique humana. Nos sumergiremos en el
+          vastísimo mundo de la psicología, desvelando conceptos clave,
+          compartiendo ideas y ofreciendo herramientas prácticas. Comprende
+          mejor tu mente y la de quienes te rodean en esta aventura de
+          autodescubrimiento y conocimiento que te inspirará a vivir con mayor
+          bienestar y conciencia.
+        </h2>
+
+        <section id="Mi galeria">
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img
+                src="https://i.postimg.cc/c4t6FPnC/Gemini-Generated-Image-ysfyupysfyupysfy.png"
+                alt="explorando los rincones de la psique humana"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://i.postimg.cc/GmktCYz1/Gemini-Generated-Image-m1k2bcm1k2bcm1k2.png"
+                alt="Mente y conciencia"
+              />
+            </div>
+          </div>
+        </section>
+
+        <button id="mostrarGaleriaBtn">Galería</button>
+
+        <section id="explorar">
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-700">
+            Explorando la Mente
+          </h2>
+          <p class="mb-4">
+            <strong
+              >Esta sección desentraña los pilares fundamentales de la
+              psicología.</strong
+            >
+            Es tu guía para comprender el funcionamiento interno: la memoria,
+            las emociones, la personalidad y la cognición. Abordamos cómo
+            recordamos, sentimos, nos definimos y tomamos decisiones. El
+            objetivo es simplificar conceptos complejos con ejemplos cotidianos,
+            mostrando la psicología en acción en tu vida.
+          </p>
+          <p>
+            ¿Te has preguntado por qué reaccionas de cierta manera o cómo
+            cultivar una mentalidad más positiva? En "Explorando la Mente", nos
+            adentramos en el universo de la psicología humana, haciendo
+            conceptos complejos accesibles. Descubrirás cómo pensamientos,
+            emociones y comportamientos se entrelazan, y obtendrás herramientas
+            para manejar el estrés, mejorar relaciones y potenciar tu bienestar
+            emocional. No necesitas ser un experto, solo la curiosidad de
+            entenderte mejor a ti mismo y al mundo.
+          </p>
+
+          <button id="beHappyBtn">Be happy</button>
+          <p
+            id="motivacionFrase"
+            style="text-align: center; font-style: italic; margin-top: 15px"
+          ></p>
+
+          <img
+            src="https://images.pexels.com/photos/8849272/pexels-photo-8849272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Cabeza púrpura abstracta con mariposas azules flotando, simbolizando la creatividad y la salud mental."
+          />
+        </section>
+
+        <section id="bienestar">
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-700">
+            Bienestar y Autocuidado
+          </h2>
+          <p class="mb-4">
+            <strong
+              >Esta sección es tu caja de herramientas personal para una vida
+              más equilibrada y plena.</strong
+            >
+            Encuentra consejos prácticos y estrategias psicológicas para mejorar
+            tu día a día. Exploramos el manejo del estrés, la inteligencia
+            emocional, cómo fomentar la autoestima y desarrollar hábitos
+            saludables que benefician mente y cuerpo. Nuestro objetivo es
+            ofrecerte recursos aplicables para tu salud mental y emocional.
+          </p>
+
+          <p>
+            En el ajetreo moderno, el
+            <strong class="text-black">bienestar y autocuidado</strong> son más
+            cruciales que nunca. Va más allá de simples tareas; es una
+            exploración consciente de tu psique: entender emociones, reconocer
+            límites y nutrir tu salud mental. Es el arte de sintonizar con tus
+            necesidades internas, establecer límites saludables y cultivar
+            hábitos que fortalezcan tu resiliencia emocional, para afrontar
+            desafíos diarios con serenidad y claridad.
+          </p>
+
+          <img
+            src="https://images.pexels.com/photos/2529375/pexels-photo-2529375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Mujer meditando"
+          />
+        </section>
+
+        <section id="psicologia">
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-700">
+            Psicología en la Vida Cotidiana
+          </h2>
+          <p class="mb-4">
+            <strong
+              >En esta sección, demostramos cómo la psicología se manifiesta en
+              cada interacción y decisión diaria.</strong
+            >
+            Exploraremos la psicología de las relaciones (familia, pareja,
+            amistades) para entender nuestras conexiones. Analizaremos la
+            influencia del marketing y la publicidad en nuestras compras, y cómo
+            los sesgos cognitivos ("trampas" cerebrales) afectan percepción y
+            juicios. Descubre que la psicología no es solo para el consultorio,
+            sino omnipresente en tu vida.
+          </p>
+          <p>
+            "Psicología en la Vida Cotidiana" es tu acceso al fascinante mundo
+            de la mente humana, presentado de forma directa. Desglosamos cómo
+            principios psicológicos son herramientas poderosas para tu día a
+            día. Si te has preguntado por qué reaccionamos de cierta manera,
+            cómo mejorar tus relaciones o manejar el estrés, este es tu lugar.
+            Esta sección es para curiosos y quienes buscan crecimiento personal,
+            deseando entender los mecanismos que nos impulsan. Olvídate de la
+            jerga; aquí, la psicología cobra vida y se vuelve tu aliada para una
+            vida más plena y consciente.
+          </p>
+          <img
+            src="https://images.pexels.com/photos/8761649/pexels-photo-8761649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="personas entablando una conversación"
+          />
+        </section>
+
+        <section id="curiosidades">
+          <h2 class="text-2xl font-semibold mb-4 text-indigo-700">
+            Curiosidades y Mitos
+          </h2>
+          <p class="mb-4">
+            <strong
+              >Prepárate para sorprenderte y derribar creencias
+              populares.</strong
+            >
+            Esta sección es un tesoro de datos fascinantes, experimentos
+            psicológicos célebres y hallazgos sorprendentes que desafiarán lo
+            que creías. Desmentiremos mitos comunes sobre la salud mental, la
+            terapia o el comportamiento humano, revelando la verdad. Es el lugar
+            ideal para satisfacer tu curiosidad, aprender algo nuevo y descubrir
+            aspectos insospechados de la mente humana de forma divertida y
+            educativa.
+          </p>
+          <p>
+            ¿Te has preguntado por qué recordamos vívidamente algunos eventos o
+            si realmente usamos solo el 10% de nuestro cerebro? En "Mente y
+            Conciencia", exploramos la psique humana para desentrañar las
+            curiosidades más intrigantes y desmentir mitos arraigados. Descubre
+            datos asombrosos sobre tu memoria, sueños y cómo las emociones
+            influyen en tu percepción. Aquí, la psicología es accesible y
+            emocionante, invitándote a cuestionar y explorar las maravillas
+            ocultas de tu propia mente.
+          </p>
+
+          <p>
+            Más allá de titulares sensacionalistas y creencias populares, esta
+            sección ofrece una mirada profunda y fundamentada a los misterios de
+            la psicología. Desde el efecto placebo hasta la complejidad de tus
+            decisiones diarias, te sorprenderá la ciencia detrás de tu
+            comportamiento y pensamientos. Nuestro objetivo es equiparte con
+            conocimientos y herramientas prácticas para tu crecimiento personal,
+            mejorar tus relaciones y gestionar el estrés eficazmente. Sumérgete
+            en este viaje de autodescubrimiento para vivir una vida más
+            consciente y plena.
+          </p>
+
+          <button id="datoCuriosoBtn">Revelar Dato Curioso</button>
+          <p id="datoCuriosoParrafo"></p>
+          <img
+            src="https://images.pexels.com/photos/8028269/pexels-photo-8028269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Mujer haciendo una busqueda con binoculares"
+          />
+          <main>
+            <section id="nuestra-app-juego">
+              <h2 class="text-2xl font-semibold mb-4 text-indigo-700">
+                🌸 Mind Canvas: Traza tu Bienestar Mental 🧠
+              </h2>
+              <p>
+                ¡Sumérgete en nuestra aplicación interactiva diseñada para
+                fomentar tu bienestar mental! Este juego te ayudará a explorar y
+                entender mejor tus emociones.
+              </p>
+              <div style="text-align: center">
+                <iframe
+                  src="https://pqy8kv.csb.app/"
+                  width="90%"
+                  height="600px"
+                  frameborder="0"
+                  allowfullscreen
+                  style="
+                    border-radius: 1rem;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  "
+                ></iframe>
+              </div>
+            </section>
+          </main>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          © 2025 Mente y Conciencia: Explorando los rincones de la psique humana
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Obtener el botón y el párrafo del dato curioso
+      const botonRevelar = document.getElementById("datoCuriosoBtn");
+      const parrafoDato = document.getElementById("datoCuriosoParrafo");
+
+      botonRevelar.addEventListener("click", function () {
+        parrafoDato.textContent =
+          "¡Compraste algo nuevo y ahora lo ves por todas partes? Es el Sesgo de Frecuencia. Tu cerebro lo nota más porque ya le prestaste atención!";
+      });
+
+      // Funcionalidad para el botón "Be happy"
+      const beHappyBtn = document.getElementById("beHappyBtn");
+      const motivacionFrase = document.getElementById("motivacionFrase");
+
+      beHappyBtn.addEventListener("click", function () {
+        motivacionFrase.textContent =
+          "¡La felicidad es un viaje, no un destino. Disfruta cada paso!";
+      });
+
+      // Funcionalidad para mostrar la galería
+      const mostrarGaleriaBtn = document.getElementById("mostrarGaleriaBtn");
+      const galeriaContainer = document.querySelector(".gallery-container");
+
+      mostrarGaleriaBtn.addEventListener("click", function () {
+        galeriaContainer.style.display = "flex"; // Mostrar la galería como flex
+        mostrarGaleriaBtn.style.display = "none"; // Ocultar el botón después de mostrar
+      });
+    </script>
+  </body>
+</html>
